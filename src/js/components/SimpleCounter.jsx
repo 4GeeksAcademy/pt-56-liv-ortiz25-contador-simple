@@ -1,17 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
-function SimpleCounter() {
-  const [counter, setCounter] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCounter(prev => prev + 1);
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  
+function SimpleCounter({ counter }) {
   const six = Math.floor(counter / 100000) % 10;
   const five = Math.floor(counter / 10000) % 10;
   const four = Math.floor(counter / 1000) % 10;
@@ -32,5 +21,5 @@ function SimpleCounter() {
   );
 }
 
-
 export default SimpleCounter;
+

@@ -1,12 +1,13 @@
 import React from "react";
 import SimpleCounter from "./SimpleCounter"; 
 
-function Home() {
+function Home({ counter }) {
   return (
     <div>
-      <SimpleCounter />
+      <SimpleCounter counter={counter} />
     </div>
   );
 }
 
 export default Home;
+
